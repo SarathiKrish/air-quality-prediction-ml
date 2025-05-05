@@ -3,11 +3,10 @@ import os
 import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 
-# Train model if not found
+# Check if model exists, else train it
 if not os.path.exists("model.pkl"):
-    st.warning("Training model on first run...")
+    st.warning("🔁 Training model on first run...")
 
     # Load sample data
     df = pd.read_csv("data/air_quality_data.csv")
@@ -24,14 +23,14 @@ else:
 
 # Streamlit UI
 st.title("🌫️ Air Quality Prediction App")
-st.markdown("Enter pollutant levels to predict AQI category.")
+st.write("Enter pollutant levels to predict AQI category.")
 
-pm25 = st.number_input("PM2.5", 0.0)
-pm10 = st.number_input("PM10", 0.0)
-so2 = st.number_input("SO₂", 0.0)
-no2 = st.number_input("NO₂", 0.0)
+pm25 = st.number_input("PM2.5", min_value=0.0)
+pm10 = st.number_input("PM10", min_value=0.0)
+so2 = st.number_input("SO₂", min_value=0.0)
+no2 = st.number_input("NO₂", min_value=0.0)
 
 if st.button("Predict AQI Level"):
-    features = [[pm25, pm10, so2, no2]]
-    prediction = model.predict(features)
-    st.success(f"Predicted AQI Level: **{prediction[0]}**")
+    input_data = [[pm25, pm10, so2, no2]]
+    prediction = model.predict(input_data)
+    st.success(f"✅ Predicted AQI Level: **{prediction[0]}**")
