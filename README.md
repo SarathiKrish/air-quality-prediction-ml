@@ -18,5 +18,5 @@ This machine learning-based project aims to predict air quality levels using env
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/air-quality-prediction-ml.git
+git clone https://github.com/SarathiKrish/air-quality-prediction-ml.git
 cd air-quality-prediction-ml
