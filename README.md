@@ -30,3 +30,34 @@ This project aims to predict the **Air Quality Index (AQI)** based on environmen
 
 ## 📂 Project Structure
 
+├── app.py ← Streamlit app
+├── model/ ← Saved model (.pkl)
+├── data/ ← Raw dataset
+├── src/ ← Source code (preprocessing, training)
+├── requirements.txt ← All dependencies
+├── README.md ← You are here
+
+---
+
+## 🚀 Features
+
+- Predicts AQI using trained ML models
+- Interactive and user-friendly interface
+- Visual data analysis
+- Realtime prediction from user inputs
+
+---
+
+## 📷 Screenshots
+
+![App Screenshot](link-to-screenshot.png)
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+git clone https://github.com/yourusername/air-quality-prediction.git
+cd air-quality-prediction
+pip install -r requirements.txt
+streamlit run app.py
