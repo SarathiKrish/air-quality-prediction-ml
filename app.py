@@ -1,36 +1,21 @@
 import streamlit as st
-import os
-import joblib
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+import joblib
 
-# Check if model exists, else train it
-if not os.path.exists("model.pkl"):
-    st.warning("🔁 Training model on first run...")
+model = joblib.load("model/air_quality_model.pkl")
 
-    # Load sample data
-    df = pd.read_csv("data/air_quality_data.csv")
-    X = df[['PM2.5', 'PM10', 'SO2', 'NO2']]
-    y = df['AQI_Level']
-
-    model = RandomForestClassifier()
-    model.fit(X, y)
-
-    joblib.dump(model, "model.pkl")
-    st.success("✅ Model trained and saved.")
-else:
-    model = joblib.load("model.pkl")
-
-# Streamlit UI
 st.title("🌫️ Air Quality Prediction App")
-st.write("Enter pollutant levels to predict AQI category.")
+st.markdown("Predict AQI levels using machine learning.")
 
-pm25 = st.number_input("PM2.5", min_value=0.0)
-pm10 = st.number_input("PM10", min_value=0.0)
-so2 = st.number_input("SO₂", min_value=0.0)
-no2 = st.number_input("NO₂", min_value=0.0)
+# Input features
+pm25 = st.number_input("PM2.5")
+pm10 = st.number_input("PM10")
+so2 = st.number_input("SO2")
+no2 = st.number_input("NO2")
+co = st.number_input("CO")
+o3 = st.number_input("O3")
 
-if st.button("Predict AQI Level"):
-    input_data = [[pm25, pm10, so2, no2]]
+if st.button("Predict AQI"):
+    input_data = [[pm25, pm10, so2, no2, co, o3]]
     prediction = model.predict(input_data)
-    st.success(f"✅ Predicted AQI Level: **{prediction[0]}**")
+    st.success(f"Predicted AQI Level: {prediction[0]}")
