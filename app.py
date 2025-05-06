@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-import joblib
+from skops import io as sio
 
-model = joblib.load("model/air_quality_model.pkl")
+model = sio.load("model/air_quality_model.skops")
 
 st.title("🌫️ Air Quality Prediction App")
 st.markdown("Predict AQI levels using machine learning.")
