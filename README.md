@@ -1,60 +1,47 @@
-# 🌍 Predicting Air Quality Levels Using Advanced Machine Learning Algorithms
+# 🌿 Air Quality Level Prediction using Machine Learning
 
-An intelligent system developed under the **Naan Mudhalvan Scheme** that predicts air quality levels using machine learning algorithms. Built with love by final-year CSE students from **A.K.T Memorial College of Engineering and Technology**.
-
----
-
-## 📌 Project Overview
-
-This project aims to predict the **Air Quality Index (AQI)** based on environmental data. Using advanced machine learning algorithms, it offers insights into pollution levels and promotes awareness for a cleaner environment.
+This project predicts the **Air Quality Index (AQI) level** based on key air pollutant concentrations using a machine learning model. It is built using `scikit-learn`, deployed with `Streamlit`, and packaged using the modern and version-independent `skops` format.
 
 ---
 
-## 👨‍💻 Team Members
+## 📊 Dataset
 
-- Sarathi K 
-- Sathish S  
-- Karthick P  
-- Sibiraj N  
+The dataset includes the following features:
 
----
+- `PM2.5` – Fine particulate matter (µg/m³)
+- `PM10` – Coarse particulate matter (µg/m³)
+- `SO2` – Sulfur Dioxide (ppb)
+- `NO2` – Nitrogen Dioxide (ppb)
 
-## 🛠️ Tech Stack
+The target label is:
 
-- **Frontend**: Streamlit (for web interface)
-- **Backend**: Python
-- **ML Frameworks**: Scikit-learn, Pandas, NumPy
-- **Deployment**: Streamlit Cloud (Free Hosting)
-
----
-
-## 📂 Project Structure
-
-├── app.py ← Streamlit app
-├── model/ ← Saved model (.pkl)
-├── data/ ← Raw dataset
-├── src/ ← Source code (preprocessing, training)
-├── requirements.txt ← All dependencies
-├── README.md ← You are here
+- `AQI_Level` – A categorical variable indicating the air quality level.
 
 ---
 
 ## 🚀 Features
 
-- Predicts AQI using trained ML models
-- Interactive and user-friendly interface
-- Visual data analysis
-- Realtime prediction from user inputs
+- Clean UI for real-time AQI level prediction.
+- Uses a trained **Random Forest Classifier**.
+- Input fields for air pollution data.
+- Intelligent label mapping for interpretability (e.g., "Good", "Unhealthy", etc.).
+- Fully deployable on **Streamlit Cloud**.
 
 ---
 
-## 📷 Screenshots
+## 🧠 Model
 
-![App Screenshot](link-to-screenshot.png)
+The machine learning model was:
+
+- Trained in **Google Colab** using `scikit-learn`.
+- Saved in `.skops` format using the `skops` library for **version independence**.
+- Loaded efficiently within Streamlit using `@st.cache_resource`.
 
 ---
 
-## 🧪 How to Run Locally
+## 🛠 Installation
+
+To run this project locally:
 
 ```bash
 git clone https://github.com/SarathiKrish/air-quality-prediction-ml.git
