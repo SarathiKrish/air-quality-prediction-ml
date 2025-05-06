@@ -1,22 +1,32 @@
-# Predicting Air Quality Levels Using Advanced Machine Learning Algorithms for Environmental Insights
+# 🌍 Predicting Air Quality Levels Using Advanced Machine Learning Algorithms
 
-This project is part of the **Naan Mudhalvan** initiative, developed by Sarathi.K, Sathish.S, Karthick.P, and Sibiraj.N from A.K.T Memorial College of Engineering and Technology, B.E. CSE.
+An intelligent system developed under the **Naan Mudhalvan Scheme** that predicts air quality levels using machine learning algorithms. Built with love by final-year CSE students from **A.K.T Memorial College of Engineering and Technology**.
 
-## 📌 Project Description
+---
 
-This machine learning-based project aims to predict air quality levels using environmental pollution indicators such as PM2.5, PM10, SO2, NO2, and others. The predictions are made using a trained model and visualized through a user-friendly Streamlit web app.
+## 📌 Project Overview
 
-## 🚀 Tech Stack
+This project aims to predict the **Air Quality Index (AQI)** based on environmental data. Using advanced machine learning algorithms, it offers insights into pollution levels and promotes awareness for a cleaner environment.
 
-- Python
-- Pandas
-- Scikit-learn
-- Streamlit
-- Joblib
+---
 
-## 💻 How to Use
+## 👨‍💻 Team Members
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/SarathiKrish/air-quality-prediction-ml.git
-cd air-quality-prediction-ml
+- Sarathi K 
+- Sathish S  
+- Karthick P  
+- Sibiraj N  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Streamlit (for web interface)
+- **Backend**: Python
+- **ML Frameworks**: Scikit-learn, Pandas, NumPy
+- **Deployment**: Streamlit Cloud (Free Hosting)
+
+---
+
+## 📂 Project Structure
+
