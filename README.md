@@ -57,7 +57,7 @@ This project aims to predict the **Air Quality Index (AQI)** based on environmen
 ## 🧪 How to Run Locally
 
 ```bash
-git clone https://github.com/yourusername/air-quality-prediction.git
+git clone https://github.com/SarathiKrish/air-quality-prediction.git
 cd air-quality-prediction
 pip install -r requirements.txt
 streamlit run app.py
